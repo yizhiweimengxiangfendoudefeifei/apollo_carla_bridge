@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # Copyright (c) 2018-2020 Intel Corporation
 #
@@ -404,9 +405,9 @@ def main(args=None):
         dist = pkg_resources.get_distribution("carla")
         if LooseVersion(dist.version) != LooseVersion(CarlaCyberBridge.CARLA_VERSION):
             carla_bridge.logfatal("CARLA python module version {} required. Found: {}".format(
-                CarlaCyberBridge.CARLA_VERSION,dist.version
-            ))
+                CarlaCyberBridge.CARLA_VERSION,dist.version))
             sys.exit(1)
+            
         if LooseVersion(carla_client.get_server_version()) != \
            LooseVersion(carla_client.get_client_version()):
             carla_bridge.logwarn(

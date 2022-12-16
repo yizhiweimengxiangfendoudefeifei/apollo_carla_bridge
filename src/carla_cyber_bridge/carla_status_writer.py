@@ -10,6 +10,7 @@
 report the carla status
 """
 
+import os
 from cyber.carla_bridge.carla_proto.proto.carla_status_pb2 import CarlaStatus
 
 

@@ -32,6 +32,7 @@ from carla_cyber_bridge.carla_status_writer import CarlaStatusWriter
 # from carla_cyber_bridge.debug_helper import DebugHelper
 from carla_cyber_bridge.ego_vehicle import EgoVehicle
 from carla_cyber_bridge.world_info import WorldInfo
+from carla_cyber_bridge.actor import Actor
 
 from cyber_py import cyber
 from cyber.carla_bridge.carla_proto.proto.carla_clock_pb2 import Time, Clock
@@ -109,7 +110,7 @@ class CarlaCyberBridge(CompatibleNode):
                 "Passive mode is enabled and CARLA world is configured in synchronous mode. This configuration requires another client ticking the CARLA world.")
         self.carla_control_queue = queue.Queue()
         self.actor_factory = ActorFactory(self, carla_world, self.sync_mode)
-        self.carla_world = WorldInfo(carla_world=self.carla_world, node=self)
+        self.world_info = WorldInfo(carla_world=self.carla_world, node=self)
         # Communication topics
         self.clock_writer = self.new_writer('/clock', Clock, 10)
         self.status_writer = CarlaStatusWriter(
@@ -407,7 +408,7 @@ def main(args=None):
             carla_bridge.logfatal("CARLA python module version {} required. Found: {}".format(
                 CarlaCyberBridge.CARLA_VERSION,dist.version))
             sys.exit(1)
-            
+
         if LooseVersion(carla_client.get_server_version()) != \
            LooseVersion(carla_client.get_client_version()):
             carla_bridge.logwarn(

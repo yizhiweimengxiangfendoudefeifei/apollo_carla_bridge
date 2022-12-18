@@ -17,7 +17,7 @@ A simulation between apollo and carla.
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br /> -->
     <br />
-    <a href="">View Demo</a>
+    <a href="https://www.bilibili.com/video/BV1P84y1471Y/?vd_source=b7830616317d04289db089c940d49514">View Demo</a>
     ·
     <a href="https://github.com/yizhiweimengxiangfendoudefeifei/apollo_carla_bridge/issues">Report Bug</a>
     ·
@@ -195,9 +195,8 @@ Alternatively, simply perform the following steps：
     ```
 
 ### Result
-If you successfully built and ran, you should see this in this video: 
- 
-![demo](docs/images/Apollo.png)
+If you successfully built and ran, you should see this in this video:   
+<a href="https://www.bilibili.com/video/BV1P84y1471Y/?vd_source=b7830616317d04289db089c940d49514">Demo</a>
 
 
 ## Usage

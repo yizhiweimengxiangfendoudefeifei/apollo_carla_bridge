@@ -224,7 +224,7 @@ class CarlaSpawnObjects(CompatibleNode):
 
                 # check if there's a spawn_point corresponding to this vehicle
                 # spawn_point_param = None  
-                spawn_point_param = '0,0,0,0,0,180'
+                spawn_point_param = '127.4,-195.4,2,0,0,180'
                 spawn_param_used = False
                 self.logdebug(spawn_point_param)
                 if (spawn_point_param is not None):

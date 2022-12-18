@@ -190,7 +190,7 @@ Alternatively, simply perform the following steps：
     Attention 
     in the carla_spawn_objects.py
     ```sh
-    spawn_point_param = '0,0,0,0,0,180' # spawn vehicle at special position
+    spawn_point_param = '127.4,-195.4,2,0,0,180' # spawn vehicle at special position
     spawn_point_param = None # spawn vehicle at random position
     ```
 
